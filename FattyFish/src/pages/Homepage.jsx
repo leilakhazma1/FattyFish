@@ -1,8 +1,12 @@
-export default function Homepage() { 
-    return (
+
+import React from 'react';
+
+function Homepage() {
+  return (
     <div className="Homepage">
-    <h1>Home</h1>
-    
+      <h1>Home</h1>
     </div>
-    )
+  );
 }
+
+export default Homepage;
