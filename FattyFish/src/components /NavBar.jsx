@@ -7,11 +7,6 @@ function NavBar() {
     <nav className="navbar">
       <ul className="nav-list">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link" activeClassName="active-link" exact>
-            Home
-          </NavLink>
-        </li>
-        <li className="nav-item">
           <NavLink to="/breakingfish" className="nav-link" activeClassName="active-link">
             Breaking Fish
           </NavLink>

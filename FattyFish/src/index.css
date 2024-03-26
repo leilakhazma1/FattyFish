@@ -1,8 +1,7 @@
 :root {
-  font-family: monospace; 
   line-height: 1.5;
   letter-spacing: 10px;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
   background-color: white;
   opacity: 1;
@@ -16,9 +15,10 @@
   content: '';
   background-image: url('./assets/red-snapper-6254416_1280.png');
   background-size: 40%; 
+  opacity: 60%;
   background-repeat: no-repeat; 
-  background-position: center; 
-  transform: rotate(180deg);
+  background-position: right; 
+  transform: rotate(90deg);
   position: absolute; 
   top: 0;
   left: 0;
@@ -37,28 +37,25 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-top: 20px; 
-}
 
 
 .navbar {
   width: 100%;
-  background-color: #ec8e8e;
-  color: white;
-  position: fixed; 
-  top: 0; 
+  background-image: url('./assets/Paris-Texas-067.jpg');
+  background-size: cover; 
+  opacity: 60%;
+  background-position: center; 
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 1000; 
-  height: 50px; 
+  z-index: 1000;
+  height: 50px;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  justify-content:space-between; 
+  align-items: center; 
   padding: 0;
   margin: 0;
 }
@@ -70,15 +67,15 @@ h1 {
 
 .nav-link {
   text-decoration: none;
-  font-size: 25px;
-  letter-spacing: 5px;
-  color: white;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 10px;
+  color: rgb(255, 255, 255);
   padding: 1rem;
-  margin: 0 50px; 
+  margin: 0 75px; 
 }
 
 .nav-link:hover {
   color: #64b4ca;
 }
-
-
