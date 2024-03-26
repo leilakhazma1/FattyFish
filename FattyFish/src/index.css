@@ -11,6 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative; 
 }
+
 :root::before {
   content: '';
   background-image: url('./assets/red-snapper-6254416_1280.png');
@@ -25,6 +26,11 @@
   right: 0;
   bottom: 0;
   z-index: -1; 
+}
+
+.h1 { 
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
 }
 
 body {
