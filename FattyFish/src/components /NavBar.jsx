@@ -1,19 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function NavBar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li className="nav-item">
+          <NavLink to="/" className="nav-link" activeClassName="active-link" exact>
+            Home
+          </NavLink>
         </li>
-        <li>
-          <Link to="/breakingfish">Breaking Fish</Link>
+        <li className="nav-item">
+          <NavLink to="/breakingfish" className="nav-link" activeClassName="active-link">
+            Breaking Fish
+          </NavLink>
         </li>
-        <li>
-          <Link to="/recipeindex">Recipe Index</Link>
+        <li className="nav-item">
+          <NavLink to="/recipeindex" className="nav-link" activeClassName="active-link">
+            Recipe Index
+          </NavLink>
         </li>
       </ul>
     </nav>

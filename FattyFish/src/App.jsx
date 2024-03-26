@@ -4,7 +4,7 @@ import './App.css'; // Import the CSS file for styling
 
 function App() {
   return (
-    <div className="app-container">
+    <div>
       <AppRoutes />
     </div>
   );
