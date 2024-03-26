@@ -1,6 +1,7 @@
 import React from 'react';
 import AppRoutes from './routes/AppRoutes';
-import './Homepage.css'; // Import the CSS file for styling
+import './App.css'; 
+
 
 function App() {
   return (
