@@ -14,7 +14,7 @@
   
   :root::before {
     content: '';
-    background-image: url('./assets/red-snapper-6254416_1280.png');
+    background-image: url();
     background-size: 40%; 
     opacity: 60%;
     background-repeat: no-repeat; 
@@ -28,10 +28,6 @@
     z-index: -1; 
   }
   
-  .h1 { 
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-  }
   
   body {
     margin: 0;
@@ -42,7 +38,6 @@
     min-width: 320px;
     min-height: 100vh;
   }
-  
   
   
   .navbar {
@@ -85,4 +80,14 @@
   .nav-link:hover {
     color: #64b4ca;
   }
+  
+  h1 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
   
