@@ -1,6 +1,7 @@
 [
   {
     "recipe_name": "Mackerel with Blood Plum Agrodolce",
+    "serves": 4,
     "ingredients": [
       { "name": "whole_mackerel", "measurement": "4" },
       { "name": "salt", "measurement": "to taste" },
@@ -25,6 +26,7 @@
   },
   {
     "recipe_name": "Whole Grilled Sardines with Chermoula and Steamed Potatoes",
+    "serves": 4,
     "ingredients": [
       { "name": "whole_sardines", "measurement": "8" },
       { "name": "salt", "measurement": "to taste" },
@@ -51,6 +53,7 @@
   },
   {
     "recipe_name": "Snapper Carpaccio with Salmoriglio",
+    "serves": 4,
     "ingredients": [
       { "name": "snapper_fillet", "measurement": "450 grams, skin removed" },
       { "name": "salt", "measurement": "to taste" },
@@ -70,6 +73,7 @@
   },
   {
     "recipe_name": "Confit Tuna with Green Olives and Red Chili",
+    "serves": 4,
     "ingredients": [
       { "name": "tuna_steaks", "measurement": "4" },
       { "name": "salt", "measurement": "to taste" },
@@ -89,5 +93,5 @@
       "Roast cherry tomatoes at 200°C for 20-25 minutes.",
       "Serve tuna with olives, chili, tomatoes, and garnish with parsley and lemon zest."
     ]
-  } ]
-  
+  }
+]

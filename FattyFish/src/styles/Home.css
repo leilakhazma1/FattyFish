@@ -124,11 +124,7 @@
         text-transform: capitalize;
       }
 
-      .RecipeListContainer {
-        overflow-y: auto;
-        max-height: 80vh; 
-      }
-      
+    
       
   }
   
