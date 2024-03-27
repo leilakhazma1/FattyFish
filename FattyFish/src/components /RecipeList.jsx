@@ -36,21 +36,21 @@ const RecipeList = () => {
 
   return (
     <Container>
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '80vh', overflowY: 'auto' }}>
         {recipes.map(recipe => (
-          <Box key={recipe.recipe_name} p={2} border={1} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' }, fontFamily: 'Sorts Mill Goudy, serif' }}>
-            <Typography variant="h5" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>{recipe.recipe_name}</Typography>
-            <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>Serves: {recipe.serves}</Typography>
-            <Button variant="contained" color="primary" onClick={() => handleViewRecipe(recipe)} sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>View Recipe</Button>
+          <Box key={recipe.recipe_name} p={2} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' }, fontFamily: 'Sorts Mill Goudy, serif' }}>
+            <Typography variant="h5" color="text.primary">{recipe.recipe_name}</Typography>
+            <Typography variant="body1" color="text.primary">Serves: {recipe.serves}</Typography>
+            <Button variant="contained" color="primary" onClick={() => handleViewRecipe(recipe)} sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif', mt: 1 }}>View Recipe</Button>
           </Box>
         ))}
       </Box>
 
       <Modal open={showModal} onClose={handleClose}>
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', maxWidth: '800px', maxHeight: '80vh', overflowY: 'auto', bgcolor: 'background.paper', boxShadow: 24, p: 4, fontFamily: 'Sorts Mill Goudy, serif' }}>
-          <Typography variant="h5" color="text.primary" gutterBottom sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>{selectedRecipe?.recipe_name}</Typography>
-          <Typography variant="body1" color="text.primary" gutterBottom sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>Serves: {selectedRecipe?.serves}</Typography>
-          <Typography variant="h6" color="text.primary" gutterBottom sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>Ingredients:</Typography>
+          <Typography variant="h5" color="text.primary" gutterBottom>{selectedRecipe?.recipe_name}</Typography>
+          <Typography variant="body1" color="text.primary" gutterBottom>Serves: {selectedRecipe?.serves}</Typography>
+          <Typography variant="h6" color="text.primary" gutterBottom>Ingredients:</Typography>
           {selectedRecipe?.ingredients && (
             <ul style={{ paddingLeft: '0', textAlign: 'left', fontFamily: 'Sorts Mill Goudy, serif' }}>
               {selectedRecipe.ingredients.map(ingredient => (
@@ -62,7 +62,7 @@ const RecipeList = () => {
               ))}
             </ul>
           )}
-          <Typography variant="body1" color="text.primary" gutterBottom sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>Instructions:</Typography>
+          <Typography variant="body1" color="text.primary" gutterBottom>Instructions:</Typography>
           <ol>
             {selectedRecipe?.instructions.map((instruction, index) => (
               <Typography key={index} variant="body1" color="text.primary" component="li" sx={{ fontFamily: 'Sorts Mill Goudy, serif' }}>{instruction}</Typography>
@@ -89,3 +89,5 @@ const RecipeList = () => {
 };
 
 export default RecipeList;
+
+
