@@ -7,9 +7,9 @@
       { "name": "salt", "measurement": "to taste" },
       { "name": "olive_oil", "measurement": "for searing" },
       { "name": "blood_plums", "measurement": "6-8, pitted and sliced" },
-      { "name": "sherry_vinegar", "measurement": "120 milliliters" },
-      { "name": "honey", "measurement": "30 milliliters" },
-      { "name": "water", "measurement": "120 milliliters" },
+      { "name": "sherry_vinegar", "measurement": "120 ml" },
+      { "name": "honey", "measurement": "30 ml" },
+      { "name": "water", "measurement": "120 ml" },
       { "name": "onions", "measurement": "3, finely chopped" },
       { "name": "garlic", "measurement": "4 cloves, minced" }
     ],
@@ -34,15 +34,15 @@
       { "name": "olive_oil", "measurement": "for brushing" },
       { "name": "lemon_wedges", "measurement": "for serving" },
       { "name": "new_potatoes", "measurement": "450 grams, scrubbed" },
-      { "name": "cilantro", "measurement": "120 milliliters chopped" },
-      { "name": "parsley", "measurement": "120 milliliters chopped" },
+      { "name": "cilantro", "measurement": "120 ml chopped" },
+      { "name": "parsley", "measurement": "120 ml chopped" },
       { "name": "garlic", "measurement": "2 cloves minced" },
       { "name": "cumin", "measurement": "5 grams ground" },
       { "name": "coriander", "measurement": "5 grams ground" },
       { "name": "smoked_paprika", "measurement": "2.5 grams" },
       { "name": "cayenne_pepper", "measurement": "1.25 grams" },
-      { "name": "olive_oil", "measurement": "60 milliliters" },
-      { "name": "lemon_juice", "measurement": "Juice of 1 lemon" }
+      { "name": "olive_oil", "measurement": "60 ml" },
+      { "name": "juice_of_1_lemon" }
     ],
     "instructions": [
       "Combine all chermoula ingredients.",
@@ -58,11 +58,11 @@
       { "name": "snapper_fillet", "measurement": "450 grams, skin removed" },
       { "name": "salt", "measurement": "to taste" },
       { "name": "pepper", "measurement": "to taste" },
-      { "name": "olive_oil", "measurement": "60 milliliters" },
-      { "name": "lemon_juice", "measurement": "30 milliliters" },
+      { "name": "olive_oil", "measurement": "60 ml" },
+      { "name": "lemon_juice", "measurement": "30 ml" },
       { "name": "garlic", "measurement": "2 cloves minced" },
-      { "name": "parsley", "measurement": "15 milliliters chopped" },
-      { "name": "oregano", "measurement": "15 milliliters chopped" }
+      { "name": "parsley", "measurement": "15 grams chopped" },
+      { "name": "oregano", "measurement": "15 grams chopped" }
     ],
     "instructions": [
       "Freeze snapper fillet for 30 minutes to firm up.",
@@ -78,20 +78,20 @@
       { "name": "tuna_steaks", "measurement": "4" },
       { "name": "salt", "measurement": "to taste" },
       { "name": "pepper", "measurement": "to taste" },
-      { "name": "olive_oil", "measurement": "475 milliliters" },
-      { "name": "cherry_tomatoes", "measurement": "475 milliliters" },
-      { "name": "green_olives", "measurement": "120 milliliters, pitted" },
+      { "name": "olive_oil", "measurement": "475 ml" },
+      { "name": "cherry_tomatoes", "measurement": "475 ml" },
+      { "name": "green_olives", "measurement": "120 ml, pitted" },
       { "name": "garlic", "measurement": "2 cloves minced" },
       { "name": "red_chili", "measurement": "1 sliced" },
       { "name": "parsley", "measurement": "2 tablespoons chopped" },
-      { "name": "lemon_zest", "measurement": "Zest of 1 lemon" }
+      { "name": "zest_of_one_lemon"}
     ],
     "instructions": [
       "Season tuna steaks with salt and pepper.",
-      "Place tuna in an oven-safe dish, add garlic, red chili, and green olives.",
-      "Bake at 120°C for 30-40 minutes.",
+      "Place tuna in an oven-safe dish, add garlic, red chili, green olives and submerge in oil.",
+      "Bake at 100°C for 30-40 minutes.",
       "Roast cherry tomatoes at 200°C for 20-25 minutes.",
-      "Serve tuna with olives, chili, tomatoes, and garnish with parsley and lemon zest."
+      "Serve out of oven dish with crusty bread."
     ]
   }
 ]
