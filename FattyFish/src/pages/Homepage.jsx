@@ -2,22 +2,19 @@ import React from 'react';
 import '../styles/Home.css';
 import coheranceImage from '../assets/nocoherance.png'; 
 
-
 function Homepage() {
   return (
     <div className="Homepage">
       <div className="content">
         <h1> A Homage to the Fatty Fish</h1>
-        <p> A fish shaped love letter; </p>
+        <p><a href="https://open.spotify.com/track/4tReFKumS5bcFahdXDiM1b?si=d8d9f6c00cbc477e" target="_blank" rel="noopener noreferrer">A fish shaped love letter;</a></p>
         <p> A guide on how to source, cook and eat fish </p>
         <p> My heart is fish shaped.</p>
         <p> My blood is salty and my hair floats in the water. </p> 
         <p> Morcheeba’s “The Sea” narrates my summer. </p>
       </div>
       <img src={coheranceImage} alt="Hat" className="coherance-image" />
-      
     </div>
-   
   );
 }
 
