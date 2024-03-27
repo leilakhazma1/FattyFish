@@ -1,4 +1,5 @@
 import React from 'react';
+import '../RecipeIndex.css'; 
 
 function RecipeIndex() {
   return (
