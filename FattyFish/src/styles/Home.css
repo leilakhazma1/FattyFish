@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    position: relative; /* Ensure body is relative for absolute positioning */
+    position: relative; 
   }
   
   p {
@@ -106,5 +106,23 @@
       padding: 0.3rem;
       margin: 0.2rem;
     }
+    .recipe-card {
+        border: none;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .ingredients {
+        margin-left: 0;
+        padding-left: 0;
+        list-style-type: none;
+      }
+      
+      .ingredients li {
+        text-transform: capitalize;
+      }
+      
   }
   
