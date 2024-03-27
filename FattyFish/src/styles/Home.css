@@ -11,21 +11,7 @@
     -moz-osx-font-smoothing: grayscale;
     position: relative; 
   }
-  
-  :root::before {
-    content: '';
-    background-image: url('../assets/RickStein.png');
-    background-size: 80%;
-    opacity: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-position: right 300px top; 
-    background-repeat: no-repeat;
-  }
+
   
   body {
     margin: 0;

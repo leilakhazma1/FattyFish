@@ -13,10 +13,10 @@ const RecipeList = () => {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
       {recipes.map(recipe => (
-        <div key={recipe.recipe_name} style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+        <div key={recipe.recipe_name} style={{ width: '300px', padding: '20px', border: '1px solid #ccc'}}>
           <h2>{recipe.recipe_name}</h2>
           <p>Serves: {recipe.serves}</p>
-          <button style={{ padding: '10px 20px', background: '#007bff', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>View Recipe</button>
+          <button style={{ padding: '10px 20px', background: '#007bff', color: 'black', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>View Recipe</button>
         </div>
       ))}
     </div>
