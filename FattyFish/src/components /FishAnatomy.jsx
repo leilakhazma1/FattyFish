@@ -13,32 +13,32 @@ const FishAnatomy = () => {
     {
       id: 1,
       src: image1,
-      title: 'Image 1',
-      description: 'Description for Image 1',
+      title: '1',
+      description: 'Lay a raw, chilled fish that has been gutted and scaled on a cutting board with backbone facing you. With the blade of your knife, feel for the collarbone, just behind the gills, and make an incision parallel to and slightly behind it, leaving the head attached.',
     },
     {
       id: 2,
       src: image2,
-      title: 'Image 2',
-      description: 'Description for Image 2',
+      title: '2',
+      description: 'Starting with your blade in the incision, slice along the spine from head to tail, separating the flesh from the ribs.',
     },
     {
       id: 3,
       src: image3,
-      title: 'Image 3',
-      description: 'Description for Image 3',
+      title: '3',
+      description: 'Remove the fillet from the body, cutting through the skin bordering the belly. Turn the fish over and repeat steps 1 through 3.',
     },
     {
       id: 4,
       src: image4,
-      title: 'Image 4',
-      description: 'Description for Image 4',
+      title: '4',
+      description: 'Place fillet skin side down. Cut a nick about ½″ from the tail end and insert knife at a 45° angle; slide blade under fillet while wiggling skin back and forth with your other hand until fillet is released.',
     },
     {
       id: 5,
       src: image5,
-      title: 'Image 5',
-      description: 'Description for Image 5',
+      title: '5',
+      description: 'Run the back of your knife blade along the top of fillet from head to tail against the grain of the flesh to reveal the pin bones in the center of the fillet. Tweeze as necessary',
     },
   ];
 
@@ -73,6 +73,7 @@ const FishAnatomy = () => {
             bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
+            fontFamily: 'Sorts Mill Goudy, serif', // Apply the font to the modal content
           }}
         >
           <img src={selectedImage?.src} alt={selectedImage?.title} style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 5 }} />
