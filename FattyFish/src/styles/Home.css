@@ -73,7 +73,7 @@
     padding-top: 1rem;
     font-weight: 700;
   }
-
+  
   h2 {
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 2.5rem;
@@ -89,6 +89,15 @@
     bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
+  }
+  
+  .recipe-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
   }
   
   @media (max-width: 768px) {
@@ -116,25 +125,23 @@
       padding: 0.3rem;
       margin: 0.2rem;
     }
+  
     .recipe-card {
-        border: none;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      
-      .ingredients {
-        margin-left: 0;
-        padding-left: 0;
-        list-style-type: none;
-      }
-      
-      .ingredients li {
-        text-transform: capitalize;
-      }
-
-    
-      
+      border: none;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .ingredients {
+      margin-left: 0;
+      padding-left: 0;
+      list-style-type: none;
+    }
+  
+    .ingredients li {
+      text-transform: capitalize;
+    }
   }
   
