@@ -87,7 +87,7 @@ const RecipeList = () => {
               {selectedRecipe.ingredients.map((ingredient, index) => (
                 <li key={index}>
                   <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>
-                    {`${ingredient.name.charAt(0).toUpperCase()}${ingredient.name.slice(1).replace(/_/g, ' ')}: ${ingredient.measurement}`}
+                    {`${ingredient}`}
                   </Typography>
                 </li>
               ))}

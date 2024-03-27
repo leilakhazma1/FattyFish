@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Home.css';
 import coheranceImage from '../assets/nocoherance.png'; 
 
+
 function Homepage() {
   return (
     <div className="Homepage">
@@ -14,7 +15,9 @@ function Homepage() {
         <p> Morcheeba’s “The Sea” narrates my summer. </p>
       </div>
       <img src={coheranceImage} alt="Hat" className="coherance-image" />
+      
     </div>
+   
   );
 }
 
