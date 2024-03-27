@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Button, Modal, Typography, TextField, Box, Container, IconButton } from '@mui/material';
 import { Facebook, Twitter, Email } from '@mui/icons-material';
 import { useUserContext } from '../context/UserContext';
+import recipeImage from '../assets/red.png'; // Update the path to match the location of your image file
+
+
 
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
@@ -85,6 +88,11 @@ const RecipeList = () => {
               ))}
             </ul>
           )}
+          {/* Image box to display the recipe image */}
+          {selectedRecipe?.image && (
+         <img src={recipeImage} alt="Recipe" style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain', marginTop: '1rem' }} />
+)}
+
           <Typography variant="h6" color="text.primary" gutterBottom>Instructions:</Typography>
           {selectedRecipe?.instructions && (
             <ol>
@@ -139,5 +147,3 @@ const RecipeList = () => {
 };
 
 export default RecipeList;
-
-
