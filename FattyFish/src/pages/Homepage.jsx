@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Home.css';
 import coheranceImage from '../assets/nocoherance.png'; 
+import Footer from '../components /Footer';
 
 function Homepage() {
   return (
@@ -14,9 +15,11 @@ function Homepage() {
         <p><a href="https://open.spotify.com/track/0xjkgYSzHjBZNvyUaC9cXX?si=f7cb5a758ea04cb5" target="_blank" rel="noopener noreferrer" className="link">Morcheeba’s “The Sea” narrates my summer.</a> </p>
       </div>
       <img src={coheranceImage} alt="Hat" className="coherance-image" />
+      <Footer />
     </div>
   );
 }
 
 export default Homepage;
+
 
