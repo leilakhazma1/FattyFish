@@ -14,7 +14,7 @@
 
 :root::before {
   content: '';
-  background-image: url('./assets/RickStein.png');
+  background-image: url('../assets/RickStein.png');
   background-size: 80%;
   opacity: 100%;
   position: fixed;
