@@ -9,7 +9,18 @@ function BreakingFish() {
       <h1>Comprehensive Guide to Breaking Down Fish</h1>
       <FishAnatomy />
       <img src={coheranceImage} alt="Hat" className="coherance-image" />
-    </div>
+      <iframe
+          width="320"  
+          height="180" 
+          src="https://www.youtube.com/embed/GQJ0Qufe2So?start=45"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+    
+      </div>
+    
   );
 }
 

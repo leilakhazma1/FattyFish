@@ -127,6 +127,13 @@ h2 {
   opacity: 0.5; 
 }
 
+.video-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 @media (max-width: 800px) {
   .FishAnatomy {
