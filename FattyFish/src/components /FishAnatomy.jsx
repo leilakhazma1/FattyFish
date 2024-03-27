@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Typography, Modal, Button, IconButton } from '@mui/material';
-import { ArrowForward } from '@mui/icons-material'; // Import ArrowForward icon for the next button
+import { ArrowForward } from '@mui/icons-material'; 
 import image1 from '../assets/1.png';
 import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';

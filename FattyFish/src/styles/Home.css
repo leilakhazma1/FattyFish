@@ -119,49 +119,115 @@ h2 {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 400px; 
-  max-width: 50%; 
+  width: 500px; 
+  max-width: 70%; 
   opacity: 0.5; 
 }
 
 
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    margin-top: -10px;
-  }
-
-  p {
-    font-size: 0.8rem;
-    margin-top: -5px;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-link {
-    font-size: 0.6rem;
-    padding: 0.3rem;
-    margin: 0.2rem;
-  }
-
-  .recipe-card {
-    border: none;
-    padding: 16px;
+@media (max-width: 800px) {
+  .FishAnatomy {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 2rem;
   }
 
-  .ingredients {
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type: none;
+  .FishAnatomy img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
   }
 
-  .ingredients li {
-    text-transform: capitalize;
+  .FishAnatomy .MuiTypography-root {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .FishAnatomyModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    font-family: 'Sorts Mill Goudy', serif;
+  }
+
+  .FishAnatomyModal img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .FishAnatomyModal .MuiTypography-root {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .FishAnatomyModal .MuiButton-root {
+    color: black;
+    background-color: white;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 0.8rem;
+  }
+
+  .FishAnatomyModal .MuiIconButton-root {
+    color: black;
+    background-color: white;
+  }
+
+  
+  .FishAnatomy img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+  }
+
+  .FishAnatomy .MuiTypography-root {
+    font-size: 0.8rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
   }
 }
+
+
+
+@media (max-width: 800px) {
+  .recipe-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-height: 80vh;
+    overflow-y: auto; 
+  }
+
+  .recipe-list-container .MuiTypography-root {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 0.8rem; 
+  }
+
+  .recipe-list-container .MuiButton-root {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 0.6rem; 
+    padding: 0.3rem 0.5rem; 
+  }
+
+  .recipe-list-container .MuiIconButton-root {
+    color: black;
+    background-color: white;
+    padding: 0.3rem; 
+  }
+}
+
