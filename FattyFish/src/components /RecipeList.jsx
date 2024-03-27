@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Button, Modal, Typography, TextField, Box, Container } from '@mui/material';
 
 const RecipeList = () => {
+  // State variables to manage recipes, selected recipe, modal visibility, and comments
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [comments, setComments] = useState('');
 
+  // Fetch recipes from JSON file when component mounts
   useEffect(() => {
     fetch('../FattyFish.json')
       .then(response => response.json())
@@ -14,26 +16,31 @@ const RecipeList = () => {
       .catch(error => console.error('Error fetching recipes:', error));
   }, []);
 
+  // Close the modal and reset state variables
   const handleClose = () => {
     setShowModal(false);
     setSelectedRecipe(null);
     setComments('');
   };
 
+  // Display selected recipe in modal
   const handleViewRecipe = (recipe) => {
     setSelectedRecipe(recipe);
     setShowModal(true);
   };
 
+  // Update comments state as user types
   const handleCommentsChange = (event) => {
     setComments(event.target.value);
   };
 
+  // Log comments and close modal when submitting
   const handleSubmitComments = () => {
     console.log('Comments:', comments);
     handleClose();
   };
 
+  // Render recipe list with buttons to view recipes
   return (
     <Container>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '80vh', overflowY: 'auto' }}>
@@ -61,6 +68,7 @@ const RecipeList = () => {
         ))}
       </Box>
 
+      {/* Modal to display selected recipe details */}
       <Modal open={showModal} onClose={handleClose}>
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', maxWidth: '800px', maxHeight: '80vh', overflowY: 'auto', bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
           <Typography variant="h5" color="text.primary" gutterBottom>{selectedRecipe?.recipe_name}</Typography>
@@ -104,4 +112,3 @@ const RecipeList = () => {
 };
 
 export default RecipeList;
-
