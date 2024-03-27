@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Modal, Typography, TextField, Box, Container } from '@mui/material';
+import { useUserContext } from '../context/UserContext';
 
 const RecipeList = () => {
   // State variables to manage recipes, selected recipe, modal visibility, and comments
@@ -7,6 +8,9 @@ const RecipeList = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [comments, setComments] = useState('');
+
+  // Accessing userComments and setUserComments from UserContext
+  const { userComments, setUserComments } = useUserContext();
 
   // Fetch recipes from JSON file when component mounts
   useEffect(() => {
@@ -34,15 +38,15 @@ const RecipeList = () => {
     setComments(event.target.value);
   };
 
-  // Log comments and close modal when submitting
+  // Add user's comment to the list and close the modal
   const handleSubmitComments = () => {
-    console.log('Comments:', comments);
+    setUserComments([...userComments, comments]);
     handleClose();
   };
 
-  // Render recipe list with buttons to view recipes
   return (
     <Container>
+      {/* Render recipe list */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '80vh', overflowY: 'auto' }}>
         {recipes.map(recipe => (
           <Box key={recipe.recipe_name} p={2} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' } }}>
@@ -76,21 +80,25 @@ const RecipeList = () => {
           <Typography variant="h6" color="text.primary" gutterBottom>Ingredients:</Typography>
           {selectedRecipe?.ingredients && (
             <ul style={{ paddingLeft: '0', textAlign: 'left' }}>
-              {selectedRecipe.ingredients.map(ingredient => (
-                <li key={ingredient.name}>
-                  <Typography variant="body2" color="text.primary">
+              {selectedRecipe.ingredients.map((ingredient, index) => (
+                <li key={index}>
+                  <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>
                     {`${ingredient.name.charAt(0).toUpperCase()}${ingredient.name.slice(1).replace(/_/g, ' ')}: ${ingredient.measurement}`}
                   </Typography>
                 </li>
               ))}
             </ul>
           )}
-          <Typography variant="body1" color="text.primary" gutterBottom>Instructions:</Typography>
-          <ol>
-            {selectedRecipe?.instructions.map((instruction, index) => (
-              <Typography key={index} variant="body1" color="text.primary" component="li">{instruction}</Typography>
-            ))}
-          </ol>
+          <Typography variant="h6" color="text.primary" gutterBottom>Instructions:</Typography>
+          {selectedRecipe?.instructions && (
+            <ol>
+              {selectedRecipe.instructions.map((instruction, index) => (
+                <Typography key={index} variant="body1" color="text.primary" component="li" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>
+                  {instruction}
+                </Typography>
+              ))}
+            </ol>
+          )}
           <TextField
             fullWidth
             multiline
@@ -99,12 +107,23 @@ const RecipeList = () => {
             variant="outlined"
             value={comments}
             onChange={handleCommentsChange}
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem', color: 'text.secondary' }}
           />
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
-            <Button onClick={handleClose} color="primary">Close</Button>
-            <Button onClick={handleSubmitComments} variant="contained" color="primary">Submit</Button>
+            <Button onClick={handleClose} color="primary" sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>Close</Button>
+            <Button onClick={handleSubmitComments} variant="contained" color="primary" sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>Submit</Button>
           </Box>
+          {/* Display user comments */}
+          {userComments.length > 0 && (
+            <Box mt={2} p={2} bgcolor="background.default" borderRadius={5}>
+              <Typography variant="h6" color="text.primary" gutterBottomsx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>Comments and Suggestions:</Typography>
+              {userComments.map((comment, index) => (
+                <Typography key={index} variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>
+                  {comment}
+                </Typography>
+              ))}
+            </Box>
+          )}
         </Box>
       </Modal>
     </Container>
