@@ -26,9 +26,6 @@ body {
   background-repeat: no-repeat; 
 }
 
-
-
-
 p {
   font-family: 'Sorts Mill Goudy', serif;
   font-size: 1rem;
@@ -143,7 +140,7 @@ h2 {
 
   .FishAnatomy .MuiTypography-root {
     font-family: 'Sorts Mill Goudy', serif;
-    font-size: 0.8rem;
+    font-size: 0.8rem; 
     text-align: center;
   }
 
@@ -187,20 +184,20 @@ h2 {
     background-color: white;
   }
 
-  
+
   .FishAnatomy img {
     max-width: 100%; 
     height: auto; 
     border-radius: 5px;
+    margin-bottom: 1rem; 
   }
 
   .FishAnatomy .MuiTypography-root {
-    font-size: 0.8rem;
+    font-size: 0.8rem; 
     margin-top: 0.5rem; 
     margin-bottom: 0.5rem; 
   }
 }
-
 
 
 @media (max-width: 800px) {
