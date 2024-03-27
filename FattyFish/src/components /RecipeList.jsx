@@ -11,10 +11,13 @@ const RecipeList = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Recipes</h1>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
       {recipes.map(recipe => (
-        <button key={recipe.recipe_name}>{recipe.recipe_name}</button>
+        <div key={recipe.recipe_name} style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+          <h2>{recipe.recipe_name}</h2>
+          <p>Serves: {recipe.serves}</p>
+          <button style={{ padding: '10px 20px', background: '#007bff', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>View Recipe</button>
+        </div>
       ))}
     </div>
   );
