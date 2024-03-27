@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/RecipeIndex.css'; 
 import RecipeList from '../components /RecipeList';
 
 function RecipeIndex() {
