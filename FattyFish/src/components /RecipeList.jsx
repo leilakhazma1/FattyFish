@@ -40,7 +40,7 @@ const RecipeList = () => {
         {recipes.map(recipe => (
           <Box key={recipe.recipe_name} p={2} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' } }}>
             <Typography variant="h5" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1.5rem' }}>{recipe.recipe_name}</Typography>
-            <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>Serves: {recipe.serves}</Typography>
+            <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>Serves: {recipe.serves || 4}</Typography>
             <Button
               variant="contained"
               color="primary"
@@ -64,7 +64,7 @@ const RecipeList = () => {
       <Modal open={showModal} onClose={handleClose}>
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', maxWidth: '800px', maxHeight: '80vh', overflowY: 'auto', bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
           <Typography variant="h5" color="text.primary" gutterBottom>{selectedRecipe?.recipe_name}</Typography>
-          <Typography variant="body1" color="text.primary" gutterBottom>Serves: {selectedRecipe?.serves}</Typography>
+          <Typography variant="body1" color="text.primary" gutterBottom>Serves: {selectedRecipe?.serves || 4}</Typography>
           <Typography variant="h6" color="text.primary" gutterBottom>Ingredients:</Typography>
           {selectedRecipe?.ingredients && (
             <ul style={{ paddingLeft: '0', textAlign: 'left' }}>

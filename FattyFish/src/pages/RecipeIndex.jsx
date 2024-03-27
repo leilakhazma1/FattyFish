@@ -5,7 +5,7 @@ import '../styles/Home.css';
 function RecipeIndex() {
   return (
     <div className="RecipeIndex">
-      <h1>Recipe Index</h1>
+      <h2>Recipe Index</h2>
       
       <RecipeList />
 
