@@ -1,6 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -17,6 +16,11 @@ function NavBar() {
           </NavLink>
         </li>
       </ul>
+      <div className="back-button-container">
+        <NavLink to="/" className="back-button" activeClassName="active-back-button">
+          Back to Homepage
+        </NavLink>
+      </div>
     </nav>
   );
 }
