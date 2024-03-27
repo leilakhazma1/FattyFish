@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Button, Modal, Typography, TextField, Box, Container, IconButton } from '@mui/material';
 import { Facebook, Twitter, Email } from '@mui/icons-material';
 import { useUserContext } from '../context/UserContext';
-import recipeImage from '../assets/red.png'; // Update the path to match the location of your image file
-
-
 
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
@@ -14,6 +11,7 @@ const RecipeList = () => {
 
   const { userComments, setUserComments } = useUserContext();
 
+  // Fetch recipes from JSON file when component mounts
   useEffect(() => {
     fetch('../FattyFish.json')
       .then(response => response.json())
@@ -21,32 +19,38 @@ const RecipeList = () => {
       .catch(error => console.error('Error fetching recipes:', error));
   }, []);
 
+  // Close the modal and reset state variables
   const handleClose = () => {
     setShowModal(false);
     setSelectedRecipe(null);
     setComments('');
   };
 
+  // Display selected recipe in modal
   const handleViewRecipe = (recipe) => {
     setSelectedRecipe(recipe);
     setShowModal(true);
   };
 
+  // Update comments state as user types
   const handleCommentsChange = (event) => {
     setComments(event.target.value);
   };
 
+  // Add user's comment to the list and close the modal
   const handleSubmitComments = () => {
     setUserComments([...userComments, comments]);
     handleClose();
   };
 
+  // Share recipe on the selected platform (console.log for demonstration)
   const shareRecipe = (platform) => {
     console.log(`Sharing recipe on ${platform}`);
   };
 
   return (
     <Container className="recipe-list-container">
+      {/* Render recipe list */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '80vh', overflowY: 'auto' }}>
         {recipes.map(recipe => (
           <Box key={recipe.recipe_name} p={2} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' } }}>
@@ -72,6 +76,7 @@ const RecipeList = () => {
         ))}
       </Box>
 
+      {/* Modal to display selected recipe details */}
       <Modal open={showModal} onClose={handleClose}>
         <Box sx={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', maxWidth: '800px', maxHeight: '80vh', overflowY: 'auto', bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
           <Typography variant="h5" color="text.primary" gutterBottom>{selectedRecipe?.recipe_name}</Typography>
@@ -88,11 +93,6 @@ const RecipeList = () => {
               ))}
             </ul>
           )}
-          {/* Image box to display the recipe image */}
-          {selectedRecipe?.image && (
-         <img src={recipeImage} alt="Recipe" style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain', marginTop: '1rem' }} />
-)}
-
           <Typography variant="h6" color="text.primary" gutterBottom>Instructions:</Typography>
           {selectedRecipe?.instructions && (
             <ol>
@@ -130,6 +130,7 @@ const RecipeList = () => {
               <Button onClick={handleSubmitComments} variant="contained" color="primary" sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>Submit</Button>
             </Box>
           </Box>
+          {/* Display user comments */}
           {userComments.length > 0 && (
             <Box mt={2} p={2} bgcolor="background.default" borderRadius={5}>
               <Typography variant="h6" color="text.primary" gutterBottom sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>Comments and Suggestions:</Typography>

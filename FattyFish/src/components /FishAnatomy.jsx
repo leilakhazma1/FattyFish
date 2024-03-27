@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Typography, Modal, Button } from '@mui/material';
+import { Box, Typography, Modal, Button, IconButton } from '@mui/material';
+import { ArrowForward } from '@mui/icons-material'; // Import ArrowForward icon for the next button
 import image1 from '../assets/1.png';
 import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';
@@ -7,8 +8,9 @@ import image4 from '../assets/4.png';
 import image5 from '../assets/5.png';
 
 const FishAnatomy = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
+  // Array of images with their corresponding descriptions
   const images = [
     {
       id: 1,
@@ -42,24 +44,30 @@ const FishAnatomy = () => {
     },
   ];
 
-
-  const openModal = (image) => {
-    setSelectedImage(image);
+  // Function to open the modal and display the selected image
+  const openModal = (index) => {
+    setSelectedImageIndex(index);
   };
 
+  // Function to close the modal
   const closeModal = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
+  };
+
+  // Function to navigate to the next image in the modal
+  const goToNextImage = () => {
+    setSelectedImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   return (
     <Box display="flex" justifyContent="center" alignItems="center" gap={2}>
-      {images.map((image) => (
-        <Box key={image.id} onClick={() => openModal(image)} style={{ cursor: 'pointer' }}>
+      {images.map((image, index) => (
+        <Box key={image.id} onClick={() => openModal(index)} style={{ cursor: 'pointer' }}>
           <img src={image.src} alt={image.title} style={{ width: 200, height: 150, objectFit: 'cover', borderRadius: 5 }} />
           <Typography variant="body1" align="center" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>{image.title}</Typography>
         </Box>
       ))}
-      <Modal open={!!selectedImage} onClose={closeModal}>
+      <Modal open={selectedImageIndex !== null} onClose={closeModal}>
         <Box
           sx={{
             position: 'fixed',
@@ -73,13 +81,18 @@ const FishAnatomy = () => {
             bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
-            fontFamily: 'Sorts Mill Goudy, serif', // Apply the font to the modal content
+            fontFamily: 'Sorts Mill Goudy, serif',
           }}
         >
-          <img src={selectedImage?.src} alt={selectedImage?.title} style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 5 }} />
-          <Typography variant="h5" color="text.primary" gutterBottom>{selectedImage?.title}</Typography>
-          <Typography variant="body1" color="text.primary">{selectedImage?.description}</Typography>
-          <Button onClick={closeModal} color="primary" sx={{ mt: 2, color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>Close</Button>
+          <img src={images[selectedImageIndex]?.src} alt={images[selectedImageIndex]?.title} style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 5 }} />
+          <Typography variant="h5" color="text.primary" gutterBottom>{images[selectedImageIndex]?.title}</Typography>
+          <Typography variant="body1" color="text.primary">{images[selectedImageIndex]?.description}</Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 2 }}>
+            <Button onClick={closeModal} color="primary" sx={{ color: 'black', bgcolor: 'white', fontFamily: 'Sorts Mill Goudy, serif' }}>Close</Button>
+            {selectedImageIndex !== images.length - 1 && ( // Render the arrow button only if not the last image
+              <IconButton onClick={goToNextImage} aria-label="Next" sx={{ color: 'black', bgcolor: 'white' }}><ArrowForward /></IconButton>
+            )}
+          </Box>
         </Box>
       </Modal>
     </Box>
