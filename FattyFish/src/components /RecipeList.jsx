@@ -3,16 +3,23 @@ import { Button, Modal, Typography, TextField, Box, Container, IconButton } from
 import { Facebook, Twitter, Email } from '@mui/icons-material';
 import { useUserContext } from '../context/UserContext';
 
+// Define RecipeList functional component
 const RecipeList = () => {
+  // State to store recipes
   const [recipes, setRecipes] = useState([]);
+  // State to store selected recipe
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  // State to manage modal visibility
   const [showModal, setShowModal] = useState(false);
+  // State to store comments
   const [comments, setComments] = useState('');
+  // State to store search term
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Access userComments state and setUserComments function from UserContext
   const { userComments, setUserComments } = useUserContext();
 
-  // Fetch recipes from JSON file when component mounts
+  // Fetch recipes from JSON file 
   useEffect(() => {
     fetch('../FattyFish.json')
       .then(response => response.json())
@@ -61,13 +68,13 @@ const RecipeList = () => {
   
      {/* Search bar */}
     <TextField
-  label="Search Recipes"
-  variant="outlined"
-  fullWidth
-  value={searchTerm}
-  onChange={(e) => setSearchTerm(e.target.value)}
-  sx={{ mb: 0.5 }}
-/>
+        label="Search Recipes"
+        variant="outlined"
+        fullWidth
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        sx={{ mb: 0.5 }}
+                        />
 
   
       {/* Render recipe list */}
