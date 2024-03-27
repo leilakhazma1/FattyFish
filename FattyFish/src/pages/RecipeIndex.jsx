@@ -1,5 +1,5 @@
 import React from 'react';
-import '../RecipeIndex.css'; 
+import '../styles/RecipeIndex.css'; 
 
 function RecipeIndex() {
   return (
