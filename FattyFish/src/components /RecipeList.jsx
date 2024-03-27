@@ -8,6 +8,7 @@ const RecipeList = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [comments, setComments] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const { userComments, setUserComments } = useUserContext();
 
@@ -48,14 +49,32 @@ const RecipeList = () => {
     console.log(`Sharing recipe on ${platform}`);
   };
 
+  // Filter recipes based on search term
+  const filteredRecipes = recipes.filter(recipe =>
+    recipe.recipe_name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
   return (
     <Container className="recipe-list-container">
+      <Typography variant="h3" gutterBottom>Recipe List</Typography>
+  
+      {/* Search bar */}
+      <TextField
+        label="Search Recipes"
+        variant="outlined"
+        fullWidth
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        sx={{ mb: 2 }}
+      />
+  
       {/* Render recipe list */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '80vh', overflowY: 'auto' }}>
-        {recipes.map(recipe => (
-          <Box key={recipe.recipe_name} p={2} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' } }}>
-            <Typography variant="h5" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1.5rem' }}>{recipe.recipe_name}</Typography>
-            <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1rem' }}>Serves: {recipe.serves || 4}</Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '60vh', overflowY: 'auto' }}>
+        {filteredRecipes.map(recipe => (
+          <Box key={recipe.recipe_name} p={1} borderRadius={5} bgcolor="background.paper" color="text.primary" sx={{ '&:focus': { outline: 'none' } }}>
+            <Typography variant="h6" color="text.primary" sx={{ fontFamily: 'Sorts Mill Goudy, serif', fontSize: '1.2rem' }}>{recipe.recipe_name}</Typography>
+            <Typography variant="body2" color="text.secondary">Serves: {recipe.serves || 4}</Typography>
             <Button
               variant="contained"
               color="primary"
@@ -75,7 +94,7 @@ const RecipeList = () => {
           </Box>
         ))}
       </Box>
-
+  
       {/* Modal to display selected recipe details */}
       <Modal open={showModal} onClose={handleClose}>
         <Box sx={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', maxWidth: '800px', maxHeight: '80vh', overflowY: 'auto', bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
@@ -145,6 +164,7 @@ const RecipeList = () => {
       </Modal>
     </Container>
   );
+
 };
 
 export default RecipeList;
