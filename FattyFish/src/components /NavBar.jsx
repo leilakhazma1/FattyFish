@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function NavBar() {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
       <ul className="nav-list">
@@ -16,11 +18,13 @@ function NavBar() {
           </NavLink>
         </li>
       </ul>
-      <div className="back-button-container">
-        <NavLink to="/" className="back-button" activeClassName="active-back-button">
-          Back to Homepage
-        </NavLink>
-      </div>
+      {(location.pathname === "/breakingfish" || location.pathname === "/recipeindex") && (
+        <div className="back-button-container">
+          <NavLink to="/" className="back-button" activeClassName="active-back-button">
+            Back to Homepage
+          </NavLink>
+        </div>
+      )}
     </nav>
   );
 }

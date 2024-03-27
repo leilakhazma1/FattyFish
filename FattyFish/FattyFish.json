@@ -1,113 +1,93 @@
 [
-    {
-      "recipe_name": "Mackerel with Blood Plum Agrodolce",
-      "serves": 4,
-      "ingredients": {
-        "whole_mackerel": 4,
-        "salt": "to taste",
-        "olive_oil": "for searing",
-        "blood_plums": "6-8, pitted and sliced",
-        "sherry_vinegar": "1/2 cup",
-        "honey": "2 tablespoons",
-        "water": "1/2 cup",
-        "onions": "3, finely chopped",
-        "garlic": "4 cloves, minced"
-      },
-      "instructions": "If using an open fire, prepare a medium fire and let it burn down to hot coals. To make the blood plum agrodolce, heat olive oil in a saucepan over medium heat. Cook onion until soft, add garlic and cook until fragrant. Add blood plums, sherry vinegar, honey, and water to the saucepan. Simmer until plums are soft and mixture thickens slightly. Season mackerel with salt. Grill or pan-fry mackerel until just cooked through. Serve mackerel with blood plum agrodolce."
-    },
-    {
-      "recipe_name": "Whole Grilled Sardines with Chermoula and Steamed Potatoes",
-      "serves": 4,
-      "ingredients": {
-        "whole_sardines": 8,
-        "salt": "to taste",
-        "pepper": "to taste",
-        "olive_oil": "for brushing",
-        "lemon_wedges": "for serving",
-        "new_potatoes": "1 lb, scrubbed",
-        "chermoula": {
-          "cilantro": "1/2 cup chopped",
-          "parsley": "1/2 cup chopped",
-          "garlic": "2 cloves minced",
-          "cumin": "1 teaspoon ground",
-          "coriander": "1 teaspoon ground",
-          "smoked_paprika": "1/2 teaspoon",
-          "cayenne_pepper": "1/4 teaspoon",
-          "olive_oil": "1/4 cup",
-          "lemon_juice": "Juice of 1 lemon"
-        }
-      },
-      "instructions": "Prepare chermoula by combining all chermoula ingredients. Steam new potatoes until tender. Season sardines with salt and pepper, brush with olive oil, and grill for 3-4 minutes per side. Serve grilled sardines with chermoula and steamed potatoes."
-    },
-    {
-      "recipe_name": "Snapper Carpaccio with Salmoriglio",
-      "serves": 4,
-      "ingredients": {
-        "snapper_fillet": "450 grams, skin removed",
-        "salt": "to taste",
-        "pepper": "to taste",
-        "salmoriglio": {
-          "olive_oil": "60 milliliters",
-          "lemon_juice": "30 milliliters",
-          "garlic": "2 cloves minced",
-          "parsley": "15 milliliters chopped",
-          "oregano": "15 milliliters chopped"
-        }
-      },
-      "instructions": "Freeze snapper fillet for 30 minutes to firm up. Thinly slice snapper against the grain and arrange on a plate. Combine salmoriglio ingredients and drizzle over snapper. Serve immediately."
-    },
-    {
-      "recipe_name": "Confit Tuna with Green Olives and Red Chili",
-      "serves": 4,
-      "ingredients": {
-        "tuna_steaks": 4,
-        "salt": "to taste",
-        "pepper": "to taste",
-        "olive_oil": "2 cups",
-        "cherry_tomatoes": "1 pint",
-        "green_olives": "1/2 cup, pitted",
-        "garlic": "2 cloves minced",
-        "red_chili": "1 sliced",
-        "parsley": "2 tablespoons chopped",
-        "lemon_zest": "Zest of 1 lemon"
-      },
-      "instructions": "Season tuna steaks with salt and pepper. Place tuna in an oven-safe dish, add garlic, red chili, and green olives. Bake at 250°F for 30-40 minutes. Roast cherry tomatoes at 400°F for 20-25 minutes. Serve tuna with olives, chili, tomatoes, and garnish with parsley and lemon zest."
-    },
-    {
-      "recipe_name": "Salt-Baked Rainbow Trout with Cod Roe Aioli",
-      "serves": 4,
-      "ingredients": {
-        "rainbow_trout": 2,
-        "coarse_sea_salt": "1 kg",
-        "egg_whites": "4",
-        "lemon": "1 sliced",
-        "parsley": "Fresh parsley, for garnish",
-        "cod_roe": "100 grams",
-        "egg_yolks": "2",
-        "garlic": "1 clove minced",
-        "dijon_mustard": "1 tablespoon",
-        "olive_oil": "250 milliliters",
-        "lemon_juice": "Juice of 1 lemon",
-        "salt": "to taste",
-        "pepper": "to taste"
-      },
-      "instructions": "Preheat oven to 200°C. Mix sea salt and egg whites, place a layer on a baking tray, add trout and cover with salt mixture. Bake for 20-25 minutes. Blend cod roe, egg yolks, garlic, and dijon mustard. Slowly add olive oil while blending. Season with lemon juice, salt, and pepper. Serve trout with cod roe aioli, garnished with parsley."
-    },
-    {
-      "recipe_name": "Red Mullet with Braised Chicory",
-      "serves": 4,
-      "ingredients": {
-        "red_mullet_fillets": 4,
-        "salt": "to taste",
-        "pepper": "to taste",
-        "olive_oil": "2 tablespoons",
-        "chicory": "2 heads halved lengthwise",
-        "onion": "1 thinly sliced",
-        "garlic": "2 cloves minced",
-        "red_chili": "1 sliced",
-        "chicken_or_vegetable_broth": "250 milliliters"
-      },
-      "instructions": "Season red mullet fillets with salt and pepper. Sear chicory in olive oil, remove and set aside. Cook onion, garlic, and red chili until soft. Return chicory to skillet, add broth, cover, and simmer for 15-20 minutes. Pan-fry red mullet fillets until cooked through. Serve mullet over braised chicory and chili."
-    }
-  ]
+  {
+    "recipe_name": "Mackerel with Blood Plum Agrodolce",
+    "ingredients": [
+      { "name": "whole_mackerel", "measurement": "4" },
+      { "name": "salt", "measurement": "to taste" },
+      { "name": "olive_oil", "measurement": "for searing" },
+      { "name": "blood_plums", "measurement": "6-8, pitted and sliced" },
+      { "name": "sherry_vinegar", "measurement": "120 milliliters" },
+      { "name": "honey", "measurement": "30 milliliters" },
+      { "name": "water", "measurement": "120 milliliters" },
+      { "name": "onions", "measurement": "3, finely chopped" },
+      { "name": "garlic", "measurement": "4 cloves, minced" }
+    ],
+    "instructions": [
+      "Prepare a medium fire and let it burn down to hot coals.",
+      "Heat olive oil in a saucepan over medium heat.",
+      "Cook onion until soft, add garlic and cook until fragrant.",
+      "Add blood plums, sherry vinegar, honey, and water to the saucepan.",
+      "Simmer until plums are soft and mixture thickens slightly.",
+      "Season mackerel with salt.",
+      "Grill or pan-fry mackerel until just cooked through.",
+      "Serve mackerel with blood plum agrodolce."
+    ]
+  },
+  {
+    "recipe_name": "Whole Grilled Sardines with Chermoula and Steamed Potatoes",
+    "ingredients": [
+      { "name": "whole_sardines", "measurement": "8" },
+      { "name": "salt", "measurement": "to taste" },
+      { "name": "pepper", "measurement": "to taste" },
+      { "name": "olive_oil", "measurement": "for brushing" },
+      { "name": "lemon_wedges", "measurement": "for serving" },
+      { "name": "new_potatoes", "measurement": "450 grams, scrubbed" },
+      { "name": "cilantro", "measurement": "120 milliliters chopped" },
+      { "name": "parsley", "measurement": "120 milliliters chopped" },
+      { "name": "garlic", "measurement": "2 cloves minced" },
+      { "name": "cumin", "measurement": "5 grams ground" },
+      { "name": "coriander", "measurement": "5 grams ground" },
+      { "name": "smoked_paprika", "measurement": "2.5 grams" },
+      { "name": "cayenne_pepper", "measurement": "1.25 grams" },
+      { "name": "olive_oil", "measurement": "60 milliliters" },
+      { "name": "lemon_juice", "measurement": "Juice of 1 lemon" }
+    ],
+    "instructions": [
+      "Combine all chermoula ingredients.",
+      "Steam new potatoes until tender.",
+      "Season sardines with salt and pepper, brush with olive oil, and grill for 3-4 minutes per side.",
+      "Serve grilled sardines with chermoula and steamed potatoes."
+    ]
+  },
+  {
+    "recipe_name": "Snapper Carpaccio with Salmoriglio",
+    "ingredients": [
+      { "name": "snapper_fillet", "measurement": "450 grams, skin removed" },
+      { "name": "salt", "measurement": "to taste" },
+      { "name": "pepper", "measurement": "to taste" },
+      { "name": "olive_oil", "measurement": "60 milliliters" },
+      { "name": "lemon_juice", "measurement": "30 milliliters" },
+      { "name": "garlic", "measurement": "2 cloves minced" },
+      { "name": "parsley", "measurement": "15 milliliters chopped" },
+      { "name": "oregano", "measurement": "15 milliliters chopped" }
+    ],
+    "instructions": [
+      "Freeze snapper fillet for 30 minutes to firm up.",
+      "Thinly slice snapper against the grain and arrange on a plate.",
+      "Combine salmoriglio ingredients and drizzle over snapper.",
+      "Serve immediately."
+    ]
+  },
+  {
+    "recipe_name": "Confit Tuna with Green Olives and Red Chili",
+    "ingredients": [
+      { "name": "tuna_steaks", "measurement": "4" },
+      { "name": "salt", "measurement": "to taste" },
+      { "name": "pepper", "measurement": "to taste" },
+      { "name": "olive_oil", "measurement": "475 milliliters" },
+      { "name": "cherry_tomatoes", "measurement": "475 milliliters" },
+      { "name": "green_olives", "measurement": "120 milliliters, pitted" },
+      { "name": "garlic", "measurement": "2 cloves minced" },
+      { "name": "red_chili", "measurement": "1 sliced" },
+      { "name": "parsley", "measurement": "2 tablespoons chopped" },
+      { "name": "lemon_zest", "measurement": "Zest of 1 lemon" }
+    ],
+    "instructions": [
+      "Season tuna steaks with salt and pepper.",
+      "Place tuna in an oven-safe dish, add garlic, red chili, and green olives.",
+      "Bake at 120°C for 30-40 minutes.",
+      "Roast cherry tomatoes at 200°C for 20-25 minutes.",
+      "Serve tuna with olives, chili, tomatoes, and garnish with parsley and lemon zest."
+    ]
+  } ]
   
