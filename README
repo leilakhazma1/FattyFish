@@ -1,11 +1,13 @@
 Mini Project
 
-Objective: Create an interactive REACT framework that filters recipes exclusive to the fatty fish family 
+Objective: Create an interactive REACT framework that provides recipes and a guide to approaching fish. 
 Styling and formatting: TBC 
 Dynamic Routing 
-Use of Logins and Forms - 
+Use of comments and sharing features. 
 
-Process - Create your JSON (dig throught the archives)
+Process - 
+Create your JSON (dig throught the archives)
+Fetch and map data for recipe cards 
 
 
 Pages; 
