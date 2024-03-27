@@ -87,9 +87,9 @@ h2 {
   font-family: 'Sorts Mill Goudy', serif;
   font-size: 2.5rem;
   color: #333;
-  margin-top: -50px;
+  margin-top: 0;
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-weight: 700;
 }
 

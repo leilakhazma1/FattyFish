@@ -59,15 +59,16 @@ const RecipeList = () => {
     <Container className="recipe-list-container">
       <Typography variant="h3" gutterBottom>Recipe List</Typography>
   
-      {/* Search bar */}
-      <TextField
-        label="Search Recipes"
-        variant="outlined"
-        fullWidth
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        sx={{ mb: 2 }}
-      />
+     {/* Search bar */}
+    <TextField
+  label="Search Recipes"
+  variant="outlined"
+  fullWidth
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  sx={{ mb: 0.5 }}
+/>
+
   
       {/* Render recipe list */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '60vh', overflowY: 'auto' }}>

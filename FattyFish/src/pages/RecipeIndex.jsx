@@ -6,8 +6,8 @@ import '../styles/Home.css';
 function RecipeIndex() {
   return (
     <div className="RecipeIndex">
+
       <h2>Recipe Index</h2>
-      
       <RecipeList />
 
       <img src={coheranceImage} alt="Hat" className="coherance-image" />
